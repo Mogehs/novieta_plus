@@ -5,10 +5,10 @@ const Service = () => {
   return (
     <div className="min-h-screen w-full pt-20 px-5">
       <div className="flex flex-col items-center text-center">
-        <p className="text-[1.2rem]">
+        <p className="text-[1.2rem] redText">
           What we are providing services all over the world
         </p>
-        <h2 className="text-[2.5rem] md:text-[3.3rem] mt-4 font-bold">
+        <h2 className="text-[2.5rem] md:text-[3.3rem] font-bold">
           Our Services
         </h2>
       </div>
