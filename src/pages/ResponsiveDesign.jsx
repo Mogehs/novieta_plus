@@ -38,9 +38,6 @@ const ResponsiveDesign = () => {
               "Bespoke design",
               "Unlimited revisions",
               "Edit anytime",
-              "Free optimization",
-              "Fast & reliable",
-              "Domain & email",
             ].map((item, idx) => (
               <li key={idx} className="mt-2 list-disc text-sm sm:text-base">
                 {item}
@@ -54,7 +51,7 @@ const ResponsiveDesign = () => {
           <img
             src="/services/service-preview.webp"
             alt="Service Preview"
-            className="w-full max-w-[400px] rounded-xl shadow-lg"
+            className="w-full max-w-[400px] rounded-xl "
           />
         </div>
       </div>

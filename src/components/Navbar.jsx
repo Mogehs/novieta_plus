@@ -9,12 +9,12 @@ const Navbar = () => {
 
   const handleLanguageSelect = (language) => {
     setSelectedLanguage(language);
-    setShowLanguages(false); // Hide the dropdown after selection
+    setShowLanguages(false);
   };
 
   return (
     <>
-      <nav className="bg-[#a99056] fixed w-full z-20 top-0 start-0 border-b">
+      <nav className="bg-[#a99056]">
         <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
           {/* Logo */}
           <a href="#" className="flex items-center space-x-3">

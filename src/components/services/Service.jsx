@@ -21,7 +21,7 @@ const Service = () => {
               alt=""
               className="h-15 w-fit mx-auto"
             />
-            <p>Website Design And Development</p>
+            <p>Website Design</p>
             <FaArrowRightLong className="text-black cursor-pointer text-[2rem] sm:text-[3rem] w-fit mx-auto" />
           </div>
           <div className="light-color h-60 w-[90vw] sm:h-70 sm:w-70 rounded-xl text-black text-[1.3rem] text-center flex flex-col justify-around py-10 gap-3 mt-5 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
@@ -30,7 +30,7 @@ const Service = () => {
               alt=""
               className="h-15 w-fit mx-auto"
             />
-            <p>Social Media Marketing</p>
+            <p>Digital Marketing</p>
             <FaArrowRightLong className="text-black cursor-pointer text-[2rem] sm:text-[3rem] w-fit mx-auto" />
           </div>
         </div>
@@ -47,7 +47,7 @@ const Service = () => {
               alt=""
               className="h-15 w-fit mx-auto"
             />
-            <p>Website Design And Development</p>
+            <p>Media Production and Marketing Strategy Development</p>
             <FaArrowRightLong className="text-black cursor-pointer text-[2rem] sm:text-[3rem] w-fit mx-auto" />
           </div>
         </div>
@@ -59,7 +59,7 @@ const Service = () => {
               alt=""
               className="h-15 w-fit mx-auto"
             />
-            <p>SEO Optimization</p>
+            <p>Documentation and Photography</p>
             <FaArrowRightLong className="text-black cursor-pointer text-[2rem] sm:text-[3rem] w-fit mx-auto" />
           </div>
           <div className="light-color h-60 w-[90vw] sm:h-70 sm:w-70 rounded-xl text-black text-[1.3rem] text-center flex flex-col justify-around py-10 gap-3 mt-5 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
@@ -68,7 +68,7 @@ const Service = () => {
               alt=""
               className="h-15 w-fit mx-auto"
             />
-            <p>App Development</p>
+            <p>Event and Conference Organization</p>
             <FaArrowRightLong className="text-black cursor-pointer text-[2rem] sm:text-[3rem] w-fit mx-auto" />
           </div>
         </div>
