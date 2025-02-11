@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="py-6 text-sm text-center font-semibold">
-        © 2025 codesthinker. All rights reserved.
+        © 2025 Novietta. All rights reserved.
       </div>
     </footer>
   );
