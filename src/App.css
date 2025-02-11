@@ -16,3 +16,7 @@
 .black-color {
   background-color: #252525;
 }
+
+.gradientColor {
+  background: linear-gradient(70deg, #96193a 50%, #a99056);
+}
