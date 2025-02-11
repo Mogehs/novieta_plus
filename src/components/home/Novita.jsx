@@ -2,7 +2,7 @@ import dot from '../../assets/HomeImg/dot.svg'
 import work from '../../assets/HomeImg/work.mp4'
 export default function Novita() {
     return (
-        <div className=" h-fit relative">
+        <div className=" h-fit relative mt-6">
             {/* doted */}
             <img src={dot} alt="missing dotted" className=" absolute top-0 left-0 w-1/2 sm:w-1/4" />
 
