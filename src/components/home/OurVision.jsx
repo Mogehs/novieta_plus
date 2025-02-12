@@ -21,8 +21,8 @@ export default function OurVision() {
   };
 
   return (
-    <div className="h-fit sm:mt-25">
-      <div className="w-[100%] sm:w-[60%] py-2 mx-auto">
+    <div className="h-fit mt-10 mb-10 md:mt-25">
+      <div className="w-[100%] lg:w-[60%] py-2 mx-auto">
         <p className="text-center text-xs sm:text-xl redText mb-2">
           {translations[language].subtitle}
         </p>
