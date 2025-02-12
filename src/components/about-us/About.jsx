@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -40,7 +40,7 @@ export default function CustomAccordion() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen light-color  p-6">
+    <div className="flex justify-center items-center min-h-screen light-color  p-6 mt-20">
       <div className="w-full max-w-3xl gradientColor backdrop-blur-lg p-6 rounded-xl shadow-xl">
         <h2 className="text-center text-2xl md:text-3xl font-bold text-white mb-6">
           How We Work
@@ -61,7 +61,7 @@ export default function CustomAccordion() {
               <Typography
                 component="span"
                 className="text-lg md:text-2xl font-semibold bg-clip-text "
-                style={{ fontSize: "1.5rem" }} 
+                style={{ fontSize: "1.5rem" }}
               >
                 {item.title}
               </Typography>
