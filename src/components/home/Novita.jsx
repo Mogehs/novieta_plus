@@ -6,7 +6,7 @@ export default function Novita() {
         <div className=" h-fit relative mt-23">
             {/* doted */}
             <img src={dot} alt="missing dotted" className=" absolute top-0 left-0 w-1/2 sm:w-1/4" />
-            <img src={rectangle} alt="missing dotted" className=" absolute hidden sm:visible top-0 right-4 -z-10 w-1/2 sm:w-1/3" />
+            <img src={rectangle} alt="missing dotted" className=" absolute hidden sm:inline top-0 right-4 -z-10 w-1/2 sm:w-1/3" />
 
 
 

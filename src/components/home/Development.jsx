@@ -1,4 +1,4 @@
-import cloud from '../../assets/HomeImg/cloud.webp'
+import develop from '../../assets/HomeImg/develop.png'
 export default function Development() {
     return (
         <div className=" h-fit sm:mt-10">
@@ -10,7 +10,7 @@ export default function Development() {
                 </div>
 
                 <div className=" w-[100%] sm:w-[100%] mx-auto ">
-                    <img src={cloud} alt="" />
+                    <img src={develop} alt="" />
                 </div>
             </div>
         </div>
