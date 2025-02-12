@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router-dom";
+import { LanguageContext } from "../../context/LanguageContext"; // Import the language context
 
 const Banner = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
   const navigate = useNavigate();
+  const { language } = useContext(LanguageContext); // Access current language from context
+
+  // Translations object for English and Arabic
+  const translations = {
+    en: {
+      title: "Unlock your ultimate digital work focus today!",
+      subtitle:
+        "Help your employees harness their full potential with our adaptive digital workplace.",
+      buttonText: "Get Our Services",
+    },
+    ar: {
+      title: "افتح تركيز عملك الرقمي النهائي اليوم!",
+      subtitle:
+        "ساعد موظفيك في الاستفادة القصوى من إمكاناتهم من خلال بيئة العمل الرقمية التكيفية.",
+      buttonText: "احصل على خدماتنا",
+    },
+  };
 
   return (
     <motion.div
@@ -22,7 +40,7 @@ const Banner = () => {
           transition={{ duration: 1, delay: 0.3 }}
           className="text-3xl md:text-5xl font-bold w-full text-center lg:text-start lg:w-[90%]"
         >
-          Unlock your ultimate digital work focus today!
+          {translations[language].title}
         </motion.p>
 
         <motion.p
@@ -31,8 +49,7 @@ const Banner = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="mt-4 text-center lg:text-start w-full lg:w-[80%] text-lg"
         >
-          Help your employees harness their full potential with our adaptive
-          digital workplace.
+          {translations[language].subtitle}
         </motion.p>
 
         <motion.div
@@ -44,7 +61,7 @@ const Banner = () => {
           className="mt-10 brown-color w-fit p-3 rounded-2xl cursor-pointer mx-auto sm:mx-0 hover:shadow-2xl transition-all delay-75 ease-in-out"
           onClick={() => navigate("/contact-us")}
         >
-          Get Our Services
+          {translations[language].buttonText}
         </motion.div>
       </div>
 

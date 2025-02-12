@@ -11,6 +11,7 @@ import EventCon from "./pages/services/EventCon";
 import DocPhoto from "./pages/services/DocPhoto";
 import DigitalMaketing from "./pages/services/DigitalMaketing";
 import ContactUs from "./pages/ContactUs";
+import { LanguageProvider } from "./context/LanguageContext";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl overflow-x-hidden">
@@ -36,8 +37,13 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <LanguageProvider>
+      <RouterProvider router={router} />
+    </LanguageProvider>
+  );
 };
 
 export default App;
