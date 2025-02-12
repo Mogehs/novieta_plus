@@ -2,8 +2,7 @@ import React from "react";
 
 const ResponsiveDesign = () => {
   return (
-    <div className="p-4 light-color w-[98%] mx-auto mt-20 rounded-xl">
-      {/* Header */}
+    <div className="p-4 light-color w-[98%] mx-auto mt-20 rounded-xl my-10">
       <div className="flex items-center gap-3">
         <img
           src="/services/arrow.svg"
@@ -15,9 +14,7 @@ const ResponsiveDesign = () => {
         </p>
       </div>
 
-      {/* Content Section */}
       <div className="flex flex-col md:flex-row items-center gap-6 mt-6">
-        {/* Text Content */}
         <div className="w-full md:w-[60%] text-center md:text-left">
           <p className="font-bold text-xl sm:text-2xl md:text-3xl">
             What’s included in our web design and development packages?
@@ -31,7 +28,6 @@ const ResponsiveDesign = () => {
             from desktops to smartphones.
           </p>
 
-          {/* Feature List */}
           <ul className="mt-4 pl-5 text-left">
             {[
               "Mobile-friendly",
@@ -46,7 +42,6 @@ const ResponsiveDesign = () => {
           </ul>
         </div>
 
-        {/* Image Section */}
         <div className="w-full md:w-[40%] flex justify-center">
           <img
             src="/services/service-preview.webp"

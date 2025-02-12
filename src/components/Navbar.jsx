@@ -43,24 +43,21 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center justify-center flex-grow">
             <ul className="flex space-x-8 font-bold text-lg text-white">
-              {["Home", "About", "Services", "Projects", "Contact"].map(
-                (item, index) => (
-                  <li key={index}>
-                    <Link
-                      to={
-                        (index == 0 && "/") ||
-                        (index == 1 && "/about-us") ||
-                        (index == 2 && "/services") ||
-                        (index == 3 && "/projects") ||
-                        (index == 4 && "/contact-us")
-                      }
-                      className="hover:text-[#96193a] transition-all duration-300 hover:underline hover:underline-offset-4"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                )
-              )}
+              {["Home", "About", "Services", "Contact"].map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to={
+                      (index == 0 && "/") ||
+                      (index == 1 && "/about-us") ||
+                      (index == 2 && "/services") ||
+                      (index == 3 && "/contact-us")
+                    }
+                    className="hover:text-[#96193a] transition-all duration-300 hover:underline hover:underline-offset-4"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

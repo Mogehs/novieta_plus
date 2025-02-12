@@ -3,13 +3,17 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Projects from "./pages/Projects";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import AboutUs from "./pages/AboutUs";
+import WebDesign from "./pages/services/WebDesign";
+import MediaProduction from "./pages/services/MediaProduction";
+import EventCon from "./pages/services/EventCon";
+import DocPhoto from "./pages/services/DocPhoto";
+import DigitalMaketing from "./pages/services/DigitalMaketing";
 
 const MainLayout = () => (
-  <div className="lg:mx-auto lg:max-w-7xl">
+  <div className="lg:mx-auto lg:max-w-7xl overflow-x-hidden">
     <Navbar />
     <Outlet />
     <Footer />
@@ -22,9 +26,13 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/services", element: <Services /> },
-      { path: "/projects", element: <Projects /> },
       { path: "/about-us", element: <AboutUs /> },
       { path: "/contact-us", element: <Contact /> },
+      { path: "/services/website-design", element: <WebDesign /> },
+      { path: "/services/digital-marketing", element: <DigitalMaketing /> },
+      { path: "/services/media-production", element: <MediaProduction /> },
+      { path: "/services/documentation-photography", element: <DocPhoto /> },
+      { path: "/services/event-conference", element: <EventCon /> },
     ],
   },
 ]);
