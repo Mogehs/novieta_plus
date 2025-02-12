@@ -40,7 +40,7 @@ export default function CustomAccordion() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen light-color  p-6 mt-20">
+    <div className="flex justify-center items-center min-h-screen light-color  p-6 mt-15">
       <div className="w-full max-w-3xl gradientColor backdrop-blur-lg p-6 rounded-xl shadow-xl">
         <h2 className="text-center text-2xl md:text-3xl font-bold text-white mb-6">
           How We Work

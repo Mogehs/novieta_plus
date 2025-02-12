@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Hero from "../../components/services/Hero";
 import ResponsiveDesign from "../ResponsiveDesign";
 
-// Define the services
 const services = [
   {
     title: "Make Strategy",
@@ -31,7 +30,6 @@ const services = [
   },
 ];
 
-// Card component with added SVG
 const Card = ({ title, description, svg }) => {
   return (
     <motion.div
@@ -162,12 +160,47 @@ const WebDesign = () => {
             key={index}
             title={service.title}
             description={service.description}
-            svg={service.svg} // Pass the SVG path to Card
+            svg={service.svg}
           />
         ))}
       </motion.div>
 
       <ResponsiveDesign />
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7 }}
+        className="flex flex-col-reverse lg:flex-row gap-10 items-center px-4 my-20"
+      >
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          className="w-full lg:w-[40%]"
+        >
+          <img
+            src="/services/vector.png"
+            alt="Website Design"
+            className="rounded-lg w-full"
+          />
+        </motion.div>
+        <div className="w-full lg:w-[57%] mb-10">
+          <h2 className="text-2xl lg:text-3xl font-semibold mb-3">
+            Customized Web Design and Optimal User Experience
+          </h2>
+          <p>
+            Customized web design involves creating a unique website design that
+            effectively represents a brand’s identity and values, while
+            providing an optimal user experience for visitors. This includes
+            designing layouts, graphics, and user interfaces that reflect the
+            brand’s personality and message, and developing websites with
+            intuitive navigation and functionality. At Novietta, we specialize
+            in customized web design and are dedicated to delivering
+            high-quality, user-friendly websites that exceed our clients’
+            expectations.
+          </p>
+        </div>
+      </motion.div>
     </div>
   );
 };

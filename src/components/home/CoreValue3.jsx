@@ -1,4 +1,4 @@
-import acess from '../../assets/HomeImg/acess.webp'
+import sustaible from '../../assets/HomeImg/sustaible.png'
 
 export default function CorValue3() {
 const core = [
@@ -25,9 +25,9 @@ const core = [
             <div className="h-fit sm:mt-10">
                 <div className='w-full mx-auto sm:w-[90%] grid grid-cols-1 lg:grid-cols-2 gap-4'>
                     {/* Image */}
-                    <div className="sm:w-[80%] w-full h-auto">
+                    <div className="sm:w-[100%] w-full h-auto">
                         <img
-                            src={acess}
+                            src={sustaible}
                             alt="Access"
                             className="w-full h-auto object-cover"
                         />
