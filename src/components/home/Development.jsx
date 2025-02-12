@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../context/LanguageContext"; // Import language context
-import cloud from "../../assets/HomeImg/cloud.webp";
+import develop from "../../assets/HomeImg/develop.png";
 
 export default function Development() {
   const { language } = useContext(LanguageContext); // Get current language
@@ -36,7 +36,7 @@ export default function Development() {
         </div>
 
         <div className="w-[100%] sm:w-[100%] mx-auto">
-          <img src={cloud} alt="Cloud" />
+          <img src={develop} alt="Cloud" />
         </div>
       </div>
     </div>
