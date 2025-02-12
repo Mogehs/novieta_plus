@@ -1,10 +1,12 @@
 import dot from '../../assets/HomeImg/dot.svg'
 import work from '../../assets/HomeImg/work.mp4'
+import rectangle from '../../assets/HomeImg/rectangle.png'
 export default function Novita() {
     return (
         <div className=" h-fit relative mt-6">
             {/* doted */}
             <img src={dot} alt="missing dotted" className=" absolute top-0 left-0 w-1/2 sm:w-1/4" />
+            <img src={rectangle} alt="missing dotted" className=" absolute top-0 right-4 -z-10 w-1/2 sm:w-1/3" />
 
 
 
@@ -22,13 +24,13 @@ export default function Novita() {
 
                 {/* image */}
 
-                <div className="w-full sm:w-1/1 pr-2.5 flex justify-center items-center">
+                <div className="w-full sm:w-[70%] pr-2.5 flex justify-center items-center">
                     <video
                         src={work}
                         autoPlay
                         muted
                         loop
-                        className="w-[300px] h-[200px] sm:w-[100%] sm:h-[80%] object-cover"
+                        className="w-[300px] h-[200px] sm:w-[100%] sm:h-[70%] object-cover"
                     />
                 </div>
 
