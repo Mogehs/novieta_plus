@@ -73,7 +73,7 @@ export default function CustomAccordion() {
   return (
     <>
       <Hero title="About Us" />
-      <div className="flex justify-center items-center min-h-screen p-6">
+      <div className="flex justify-center items-center  p-6">
         <div className="w-full max-w-3xl gradientColor backdrop-blur-lg p-6 shadow-xl">
           <h2 className="text-center text-2xl md:text-3xl font-bold text-white mb-6">
             {language === "en" ? "How We Work" : "كيف نعمل"}

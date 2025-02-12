@@ -34,12 +34,12 @@ export default function Novita() {
       <img
         src={rectangle}
         alt="rectangle background"
-        className="absolute hidden sm:inline top-0 right-4 -z-10 w-1/2 sm:w-1/3"
+        className="absolute hidden lg:inline top-0 right-4 -z-10 w-1/2 sm:w-1/3"
       />
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="w-full grid grid-cols-1  lg:grid-cols-2 gap-4">
         {/* Content */}
-        <div className="w-full sm:w-[80%] h-auto p-10">
+        <div className="w-full md:w-[80%] h-auto p-10">
           <h4 className="text-xs font-semibold">
             {translations[language].subtitle}
           </h4>
@@ -50,13 +50,13 @@ export default function Novita() {
         </div>
 
         {/* Video */}
-        <div className="w-full sm:w-[70%] pr-2.5 flex justify-center items-center">
+        <div className="w-full lg:w-[70%]  pr-2.5 flex justify-center items-center">
           <video
             src={work}
             autoPlay
             muted
             loop
-            className="w-[300px] h-[200px] sm:w-[100%] sm:h-[70%] object-cover"
+            className="w-[300px] h-[200px] sm:w-[70%] sm:h-[70%] object-cover"
           />
         </div>
       </div>

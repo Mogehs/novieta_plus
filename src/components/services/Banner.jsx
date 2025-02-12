@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router-dom";
@@ -15,7 +15,7 @@ const Banner = () => {
       title: "Unlock your ultimate digital work focus today!",
       subtitle:
         "Help your employees harness their full potential with our adaptive digital workplace.",
-      buttonText: "Get Our Services",
+      buttonText: "Drop us a message",
     },
     ar: {
       title: "افتح تركيز عملك الرقمي النهائي اليوم!",
@@ -31,7 +31,7 @@ const Banner = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="my-20 h-100 w-[90%] mx-auto bg-gradient-to-br gradientColor rounded-xl shadow-lg ml-auto text-white p-5 flex items-center"
+      className=" mb-10 h-100 w-[90%] mx-auto bg-gradient-to-br gradientColor rounded-xl shadow-lg ml-auto text-white p-5 flex items-center"
     >
       <div className="w-full">
         <motion.p
@@ -58,7 +58,7 @@ const Banner = () => {
             boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
           }}
           whileTap={{ scale: 0.9 }}
-          className="mt-10 brown-color w-fit p-3 rounded-2xl cursor-pointer mx-auto sm:mx-0 hover:shadow-2xl transition-all delay-75 ease-in-out"
+          className="mt-10 brown-color w-fit p-3  rounded-2xl cursor-pointer  mx-auto lg:mx-0 hover:shadow-2xl transition-all delay-75 ease-in-out"
           onClick={() => navigate("/contact-us")}
         >
           {translations[language].buttonText}

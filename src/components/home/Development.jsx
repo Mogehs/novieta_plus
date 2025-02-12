@@ -24,7 +24,7 @@ export default function Development() {
 
   return (
     <div className="h-fit sm:mt-10" dir={language === "ar" ? "rtl" : "ltr"}>
-      <div className="w-[100%] sm:w-[60%] py-2 mx-auto">
+      <div className="w-[100%] lg:w-[60%] py-2 mx-auto">
         <p className="text-center text-xs sm:text-xl redText mb-2">
           {translations[language].subtitle}
         </p>
