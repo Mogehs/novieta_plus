@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { LanguageContext } from "../../context/LanguageContext"; // Import the language context
 
 const Service = () => {
-  const { language } = useContext(LanguageContext); // Access the language from context
+  const { language } = useContext(LanguageContext);
 
   const servicesText = {
     en: {
