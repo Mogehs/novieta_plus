@@ -1,4 +1,4 @@
-import acess from '../../assets/HomeImg/acess.webp'
+import value2 from '../../assets/HomeImg/value2.png'
 
 export default function CorValue2() {
     const core = [
@@ -19,10 +19,10 @@ export default function CorValue2() {
     return (
         <div>
             <div className="h-fit sm:mt-10">
-                <div className='w-full mx-auto sm:w-[90%] grid grid-cols-1 lg:grid-cols-2 gap-4'>
+                <div className='w-full mx-auto sm:w-[90%] flex lg:flex-row flex-col gap-4'>
 
                     {/* Core Values */}
-                    <div className='sm:w-[100%] w-full p-10'>
+                    <div className='sm:w-[100%] w-full p-10 order-2 lg:order-1'>
                         <p className='redText'>Achieving results that exceed client expectations</p>
                         <h1 className='text-3xl font-semibold'>Commitment</h1>
                         {
@@ -40,9 +40,9 @@ export default function CorValue2() {
                     </div>
 
                     {/* Image */}
-                    <div className="sm:w-[80%] w-full h-auto">
+                    <div className="sm:w-[100%] w-full h-auto order-1 lg:order-2 ">
                         <img
-                            src={acess}
+                            src={value2}
                             alt="Access"
                             className="w-full h-auto object-cover"
                         />

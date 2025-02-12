@@ -1,4 +1,4 @@
-import acess from '../../assets/HomeImg/acess.webp'
+import value1 from '../../assets/HomeImg/value1.png'
 export default function CoreValue1() {
     const core = [
         {
@@ -20,9 +20,9 @@ export default function CoreValue1() {
             <div className='w-full mx-auto sm:w-[90%] grid grid-cols-1  lg:grid-cols-2 gap-4'>
 
                 {/* image */}
-                <div className="sm:w-[80%]  w-full h-auto">
+                <div className="sm:w-[100%]  w-full h-auto">
                     <img
-                        src={acess}
+                        src={value1}
                         alt="Access"
                         className="w-full h-auto object-cover"
                     />
