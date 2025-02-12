@@ -4,13 +4,14 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
-import Contact from "./pages/Contact";
 import AboutUs from "./pages/AboutUs";
 import WebDesign from "./pages/services/WebDesign";
 import MediaProduction from "./pages/services/MediaProduction";
 import EventCon from "./pages/services/EventCon";
 import DocPhoto from "./pages/services/DocPhoto";
 import DigitalMaketing from "./pages/services/DigitalMaketing";
+import ContactUs from "./pages/ContactUs";
+import { LanguageProvider } from "./context/LanguageContext";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl overflow-x-hidden">
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/services", element: <Services /> },
       { path: "/about-us", element: <AboutUs /> },
-      { path: "/contact-us", element: <Contact /> },
+      { path: "/contact-us", element: <ContactUs /> },
       { path: "/services/website-design", element: <WebDesign /> },
       { path: "/services/digital-marketing", element: <DigitalMaketing /> },
       { path: "/services/media-production", element: <MediaProduction /> },
@@ -36,8 +37,13 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <LanguageProvider>
+      <RouterProvider router={router} />
+    </LanguageProvider>
+  );
 };
 
 export default App;
