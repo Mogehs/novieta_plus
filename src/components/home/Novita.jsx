@@ -1,14 +1,20 @@
-import dot from '../../assets/HomeImg/dot.svg'
-import work from '../../assets/HomeImg/work.mp4'
-import rectangle from '../../assets/HomeImg/rectangle.png'
+import dot from "../../assets/HomeImg/dot.svg";
+import work from "../../assets/HomeImg/work.mp4";
+import rectangle from "../../assets/HomeImg/rectangle.png";
 export default function Novita() {
-    return (
-        <div className=" h-fit relative mt-23">
-            {/* doted */}
-            <img src={dot} alt="missing dotted" className=" absolute top-0 left-0 w-1/2 sm:w-1/4" />
-            <img src={rectangle} alt="missing dotted" className=" absolute hidden sm:visible top-0 right-4 -z-10 w-1/2 sm:w-1/3" />
-
-
+  return (
+    <div className=" h-fit relative mt-23">
+      {/* doted */}
+      <img
+        src={dot}
+        alt="missing dotted"
+        className=" absolute top-0 left-0 w-1/2 sm:w-1/4"
+      />
+      <img
+        src={rectangle}
+        alt="missing dotted"
+        className=" absolute hidden sm:inline top-0 right-4 -z-10 w-1/2 sm:w-1/3"
+      />
 
       <div className=" w-full grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* content */}
@@ -31,24 +37,16 @@ export default function Novita() {
 
         {/* image */}
 
-                <div className="w-full sm:w-[70%] pr-2.5 flex justify-center items-center">
-                    <video
-                        src={work}
-                        autoPlay
-                        muted
-                        loop
-                        className="w-[300px] h-[200px] sm:w-[100%] sm:h-[70%] object-cover"
-                    />
-                </div>
-
-            </div>
-
-
-
-
-
-
-
+        <div className="w-full sm:w-[70%] pr-2.5 flex justify-center items-center">
+          <video
+            src={work}
+            autoPlay
+            muted
+            loop
+            className="w-[300px] h-[200px] sm:w-[100%] sm:h-[70%] object-cover"
+          />
         </div>
-    )
+      </div>
+    </div>
+  );
 }

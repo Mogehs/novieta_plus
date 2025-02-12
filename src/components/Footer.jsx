@@ -10,7 +10,8 @@ const Footer = () => {
             href="#"
             className="flex justify-center space-x-3 lg:justify-start"
           >
-            <span className="self-center text-xl font-bold">Brand name</span>
+            <img src="/logo.png" className="h-10" alt="" />
+            <span className="self-center text-xl font-bold">Novietta</span>
           </a>
         </div>
         <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
