@@ -215,7 +215,47 @@ const DigitalMaketing = () => {
             />
           </div>
         </div>
+        
       </div>
+        <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+              className="flex flex-col-reverse lg:flex-row gap-10 items-center px-4 my-20"
+            >
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7 }}
+                className="w-full lg:w-[40%]"
+              >
+                <img
+                  src="/services/Digi3.avif"
+                  alt="Website Design"
+                  className="rounded-lg w-full"
+                />
+              </motion.div>
+              <div className="w-full lg:w-[57%] mb-10">
+                <h2 className="text-2xl lg:text-3xl font-semibold mb-3">
+                User Digital Marketing Experience  After purchasing Our Digital Marketing Services
+                </h2>
+                <p>
+                You’ll notice increased website traffic, improved brand engagement, higher conversion rates, and a stronger online presence. With real-time analytics and performance tracking, you’ll always be informed about the success of your campaigns. Our commitment to continuous optimization ensures sustainable growth and long-term success.
+                <h1 className="font-bold">Benefits :-</h1>
+                <ul className="mt-4 pl-5 text-left">
+              {[
+                "Competitive Edge ",
+                "Expert Support & Guidance",
+                "Higher Conversion Rates",
+                "RPersonalized Marketing Strategy",
+                "Higher ROI & Business Growth",
+              ].map((item)=>(
+                <li>{item}</li>
+              ))}
+              </ul>
+                </p>
+              </div>
+            </motion.div>
     </div>
   );
 };

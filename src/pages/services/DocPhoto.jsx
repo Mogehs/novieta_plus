@@ -1,7 +1,7 @@
 import React from "react";
 
 const DocPhoto = () => {
-  return <div>DocPhoto</div>;
+  return <div>DocPhoto ddd</div>;
 };
 
 export default DocPhoto;
