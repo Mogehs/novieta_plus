@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const navigate = useNavigate();
 
   return (
     <motion.div
@@ -40,6 +42,7 @@ const Banner = () => {
           }}
           whileTap={{ scale: 0.9 }}
           className="mt-10 brown-color w-fit p-3 rounded-2xl cursor-pointer mx-auto sm:mx-0 hover:shadow-2xl transition-all delay-75 ease-in-out"
+          onClick={() => navigate("/contact-us")}
         >
           Get Our Services
         </motion.div>
