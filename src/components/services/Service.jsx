@@ -1,22 +1,47 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import { motion } from "framer-motion";
-
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { LanguageContext } from "../../context/LanguageContext"; // Import the language context
 
 const Service = () => {
+  const { language } = useContext(LanguageContext); // Access the language from context
+
+  const servicesText = {
+    en: {
+      heading: "Our Services",
+      subheading: "What we are providing services all over the world",
+      websiteDesign: "Website Design",
+      digitalMarketing: "Digital Marketing",
+      mediaProduction: "Media Production and Marketing Strategy Development",
+      documentationPhotography: "Documentation and Photography",
+      eventOrganization: "Event and Conference Organization",
+    },
+    ar: {
+      heading: "خدماتنا",
+      subheading: "ما نقدمه من خدمات في جميع أنحاء العالم",
+      websiteDesign: "تصميم المواقع الإلكترونية",
+      digitalMarketing: "التسويق الرقمي",
+      mediaProduction: "إنتاج الوسائط وتطوير استراتيجيات التسويق",
+      documentationPhotography: "التوثيق والتصوير الفوتوغرافي",
+      eventOrganization: "تنظيم الفعاليات والمؤتمرات",
+    },
+  };
+
   const navigate = useNavigate();
   return (
     <div className="min-h-screen w-full pt-20 px-5">
       <div className="flex flex-col items-center text-center">
         <p className="text-[1.2rem] redText">
-          What we are providing services all over the world
+          {servicesText[language].subheading}
         </p>
         <h2 className="text-[2.5rem] md:text-[3.3rem] font-bold">
-          Our Services
+          {servicesText[language].heading}
         </h2>
       </div>
 
       <div className="p-5 md:p-10 flex flex-col md:flex-row justify-between gap-10 items-center">
+        {/* First Service */}
         <div className="flex flex-col gap-10 items-center">
           <motion.div
             whileHover={{
@@ -31,7 +56,7 @@ const Service = () => {
               className="h-15 w-fit mx-auto"
             />
             <motion.p whileHover={{ color: "#96193a", cursor: "pointer" }}>
-              Website Design
+              {servicesText[language].websiteDesign}
             </motion.p>
             <motion.div
               whileHover={{ x: 10 }}
@@ -54,7 +79,7 @@ const Service = () => {
               className="h-15 w-fit mx-auto"
             />
             <motion.p whileHover={{ color: "#96193a", cursor: "pointer" }}>
-              Digital Marketing
+              {servicesText[language].digitalMarketing}
             </motion.p>
             <motion.div
               whileHover={{ x: 10 }}
@@ -65,6 +90,7 @@ const Service = () => {
           </motion.div>
         </div>
 
+        {/* Second Service (Hidden on mobile) */}
         <div className="flex-col items-center hidden lg:inline">
           <img
             src="/services/feature-min.webp"
@@ -84,7 +110,7 @@ const Service = () => {
               className="h-15 w-fit mx-auto"
             />
             <motion.p whileHover={{ color: "#96193a", cursor: "pointer" }}>
-              Media Production and Marketing Strategy Development
+              {servicesText[language].mediaProduction}
             </motion.p>
             <motion.div
               whileHover={{ x: 10 }}
@@ -95,6 +121,7 @@ const Service = () => {
           </motion.div>
         </div>
 
+        {/* Third Service */}
         <div className="flex flex-col gap-10 items-center">
           <motion.div
             whileHover={{
@@ -109,9 +136,8 @@ const Service = () => {
               className="h-15 w-fit mx-auto"
             />
             <motion.p whileHover={{ color: "#96193a", cursor: "pointer" }}>
-              Documentation and Photography
+              {servicesText[language].documentationPhotography}
             </motion.p>
-
             <motion.div
               whileHover={{ x: 10 }}
               onClick={() => navigate("/services/documentation-photography")}
@@ -133,7 +159,7 @@ const Service = () => {
               className="h-15 w-fit mx-auto"
             />
             <motion.p whileHover={{ color: "#96193a", cursor: "pointer" }}>
-              Event and Conference Organization
+              {servicesText[language].eventOrganization}
             </motion.p>
             <motion.div
               whileHover={{ x: 10 }}
