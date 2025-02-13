@@ -16,7 +16,7 @@ const Footer = () => {
       features: ["Features", "Integrations", "Pricing", "FAQ"],
       companyLinks: ["Privacy", "Terms of Service"],
       developerLinks: ["Public API", "Documentation", "Guides"],
-      footerText: "© 2025 Novietta. All rights reserved.",
+      footerText: "© 2025 Novietaa. All rights reserved.",
     },
     ar: {
       product: "المنتج",
@@ -39,7 +39,7 @@ const Footer = () => {
             className="flex justify-center space-x-3 lg:justify-start"
           >
             <img src="/logo.png" className="h-10" alt="" />
-            <span className="self-center text-xl font-bold">Novietta</span>
+            <span className="self-center text-xl font-bold">Novietaa</span>
           </a>
         </div>
         <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
@@ -92,7 +92,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="py-6 text-sm text-center font-semibold">
-        {translations[language].footerText} {/* Dynamic footer text */}
+        {translations[language].footerText}
       </div>
     </footer>
   );
