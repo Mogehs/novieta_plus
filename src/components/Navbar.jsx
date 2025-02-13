@@ -9,7 +9,7 @@ const Navbar = () => {
   const { language, toggleLanguage, translations } = useContext(LanguageContext);
 
   return (
-    <nav className="fixed w-full z-50 top-0 backdrop-blur-md bg-[#96193a]/80 border-b border-white/20 shadow-lg">
+    <nav className="fixed w-full z-50 top-0 backdrop-blur-md bg-[#960037] border-b border-white/20 shadow-lg">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto px-4 py-3">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-3">
@@ -39,13 +39,13 @@ const Navbar = () => {
             <div className="absolute right-0 mt-2 w-40 bg-white text-black rounded-lg shadow-lg z-10">
               <button
                 onClick={() => toggleLanguage("en")}
-                className="block w-full text-left px-4 py-2 text-black hover:bg-gray-100"
+                className="block w-full text-left px-4 py-2 text-black hover:bg-gray-100 hover:rounded-lg"
               >
                 English
               </button>
               <button
                 onClick={() => toggleLanguage("ar")}
-                className="block w-full text-left px-4 text-black py-2 hover:bg-gray-100"
+                className="block w-full text-left px-4 text-black py-2 hover:bg-gray-100 hover:rounded-lg"
               >
                 Arabic
               </button>
@@ -90,13 +90,13 @@ const Navbar = () => {
               <div className="absolute left-0 mt-2 w-40 bg-white text-black rounded-lg shadow-lg z-10">
                 <button
                   onClick={() => { toggleLanguage("en"); setShowLanguages(false); }}
-                  className="block w-full text-left px-4 py-2 text-black hover:bg-gray-100"
+                  className="block w-full text-left px-4 py-2 text-black hover:bg-gray-100 hover:rounded-lg"
                 >
                   English
                 </button>
                 <button
                   onClick={() => { toggleLanguage("ar"); setShowLanguages(false); }}
-                  className="block w-full text-left px-4 text-black py-2 hover:bg-gray-100"
+                  className="block w-full text-left px-4 text-black py-2 hover:bg-gray-100 hover:rouned-lg"
                 >
                   Arabic
                 </button>

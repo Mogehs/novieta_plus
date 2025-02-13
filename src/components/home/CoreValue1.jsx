@@ -33,7 +33,7 @@ export default function CoreValue1() {
     <div className="h-fit sm:mt-10" dir={language === "ar" ? "rtl" : "ltr"}>
       <div className="w-full mx-auto sm:w-[90%] grid grid-cols-1 lg:grid-cols-2 gap-4">
         {/* Image Section */}
-        <div className="sm:w-[100%] w-full h-auto">
+        <div className="sm:w-[100%] w-full h-auto sm:mt-14">
           <img
             src={value1}
             alt="Access"
@@ -44,13 +44,13 @@ export default function CoreValue1() {
         {/* Core Value Section */}
         <div className="sm:w-[100%] w-full p-10">
           <p className="redText">{translations[language].subtitle}</p>
-          <h1 className="text-3xl font-semibold">
+          <h1 className="text-3xl font-semibold sm:font-bold">
             {translations[language].heading}
           </h1>
           {translations[language].coreValues.map((desc, index) => (
             <div key={index} className="py-2">
               <ul className="flex gap-2 items-start">
-                <p>☼</p>
+                <p className="redText text-xl">☼</p>
                 <li>{desc}</li>
               </ul>
             </div>

@@ -4,7 +4,6 @@ import { LanguageContext } from "../../context/LanguageContext"; // Import langu
 export default function OurVision() {
   const { language } = useContext(LanguageContext); // Get current language
 
-  // Define translations inside the component
   const translations = {
     en: {
       subtitle: "Enhance productivity, collaboration, and efficiency",
@@ -21,17 +20,23 @@ export default function OurVision() {
   };
 
   return (
-    <div className="h-fit mt-10 mb-10 md:mt-25">
-      <div className="w-[100%] lg:w-[60%] py-2 mx-auto">
-        <p className="text-center text-xs sm:text-xl redText mb-2">
+    <div className="h-fit mt-16 mb-16 md:mt-28 flex flex-col items-center">
+      <div className="w-[90%] lg:w-[75%] text-center bg-white p-8 rounded-lg shadow-lg">
+        {/* Subtitle with a decorative line */}
+        <p className="redText text-sm sm:text-lg font-medium uppercase tracking-wider">
           {translations[language].subtitle}
         </p>
-        <h1 className="text-center text-xl sm:text-4xl font-semibold">
+        <div className="w-16 h-1 red-color mx-auto mt-2 mb-4"></div>
+
+        {/* Title */}
+        <h1 className="text-2xl sm:text-5xl font-bold text-gray-800">
           {translations[language].title}
         </h1>
-        <div className="mt-2 px-2 text-center">
-          <p>{translations[language].description}</p>
-        </div>
+
+        {/* Description */}
+        <p className="mt-4 text-gray-600 text-sm sm:text-lg leading-relaxed">
+          {translations[language].description}
+        </p>
       </div>
     </div>
   );

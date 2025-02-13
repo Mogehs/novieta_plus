@@ -5,7 +5,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Hero from "../services/Hero";
-import { LanguageContext } from "../../context/LanguageContext"; // Import the language context
+import { LanguageContext } from "../../context/LanguageContext";
 
 const workProcess = {
   en: [
@@ -64,7 +64,7 @@ const workProcess = {
 
 export default function CustomAccordion() {
   const [expanded, setExpanded] = useState(false);
-  const { language } = useContext(LanguageContext); // Access the language from context
+  const { language } = useContext(LanguageContext);
 
   const handleChange = (panel) => (_, isExpanded) => {
     setExpanded(isExpanded ? panel : false);

@@ -23,20 +23,33 @@ export default function Development() {
   };
 
   return (
-    <div className="h-fit sm:mt-10" dir={language === "ar" ? "rtl" : "ltr"}>
-      <div className="w-[100%] lg:w-[60%] py-2 mx-auto">
-        <p className="text-center text-xs sm:text-xl redText mb-2">
+    <div
+      className="h-fit sm:mt-8 px-4 py-8"
+      dir={language === "ar" ? "rtl" : "ltr"}
+    >
+      <div className="w-full lg:w-3/4 mx-auto text-center space-y-6">
+        {/* Subtitle */}
+        <p className="text-lg sm:text-xl font-medium text-gray-600">
           {translations[language].subtitle}
         </p>
-        <h1 className="text-center text-xl sm:text-4xl font-semibold">
+
+        {/* Heading */}
+        <h1 className="text-2xl sm:text-4xl font-semibold text-gray-900">
           {translations[language].heading}
         </h1>
-        <div className="mt-2 px-2 text-center">
-          <p>{translations[language].description}</p>
-        </div>
 
-        <div className="w-[100%] sm:w-[100%] mx-auto">
-          <img src={develop} alt="Cloud" />
+        {/* Description */}
+        <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
+          {translations[language].description}
+        </p>
+
+        {/* Image Section */}
+        <div className="mt-6">
+          <img
+            src={develop}
+            alt="Cloud"
+            className="w-full h-auto object-cover rounded-lg transition-transform transform"
+          />
         </div>
       </div>
     </div>

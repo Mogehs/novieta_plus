@@ -1,64 +1,126 @@
-import { FaPhoneAlt, FaGlobe } from "react-icons/fa";
-import { IoLocationSharp, IoMailSharp } from "react-icons/io5";
-import { useContext } from "react";
+import React, { useContext } from "react";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import { LanguageContext } from "../../context/LanguageContext";
 
-const Contact = () => {
+const ContactUs = () => {
   const { language } = useContext(LanguageContext);
 
-  const contactInfo = {
+  const contactDetails = [
+    {
+      title: { en: "Address", ar: "العنوان" },
+      icon: FaMapMarkerAlt,
+      info1: { en: "640 Chestnut Ridge Road", ar: "640 شارع شستنت ريدج" },
+      info2: { en: "Spring Valley, NY 10977", ar: "وادي الربيع، نيويورك 10977" },
+    },
+    {
+      title: { en: "Email", ar: "البريد الإلكتروني" },
+      icon: FaEnvelope,
+      info1: { en: "Contact@carlyrent.com", ar: "Contact@carlyrent.com" },
+      info2: { en: "Support@carlyrent.com", ar: "دعم@carlyrent.com" },
+    },
+    {
+      title: { en: "Phone", ar: "الهاتف" },
+      icon: FaPhoneAlt,
+      info1: { en: "+(62) 800-567-8990", ar: "+(62) 800-567-8990" },
+      info2: { en: "+(62) 800-567-8990", ar: "+(62) 800-567-8990" },
+    },
+    {
+      title: { en: "Working Hours", ar: "ساعات العمل" },
+      icon: FaClock,
+      info1: { en: "Mon – Fri: 9 AM – 11 PM", ar: "من الإثنين إلى الجمعة: 9 صباحًا - 11 مساءً" },
+      info2: { en: "Sat – Sun: 9 AM – 5 AM", ar: "السبت - الأحد: 9 صباحًا - 5 صباحًا" },
+    },
+  ];
+
+  // Translations for the form section and other labels
+  const formLabels = {
     en: {
-      heading: "Contact Us",
-      website: "www.novietaaplus.com",
-      email: "novietaa@novietaaplus.com",
-      phone: "+974 70809767 & +974 70809768",
-      address: "Doha – Al Muntazah – Street 830, Building 16",
+      title: "Get in Touch",
+      name: "Your Name",
+      email: "Your Email",
+      message: "Your Message",
+      sendMessage: "Send Message",
+      mapTitle: "Find Us on the Map",
     },
     ar: {
-      heading: "اتصل بنا",
-      website: "www.novietaaplus.com",
-      email: "novietaa@novietaaplus.com",
-      phone: "+974 70809767 & +974 70809768",
-      address: "الدوحة – المنتزه – شارع 830، مبنى 16",
+      title: "تواصل معنا",
+      name: "اسمك",
+      email: "بريدك الإلكتروني",
+      message: "رسالتك",
+      sendMessage: "إرسال الرسالة",
+      mapTitle: "اعثر علينا على الخريطة",
     },
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-800 px-6 py-16">
-      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div className="container mx-auto px-6 md:px-12 py-12 mt-20" dir={language === "ar" ? "rtl" : "ltr"}>
+      {/* Header */}
+      <h1 className="text-4xl font-bold text-center mb-12">
+        {language === "en" ? "Let Us " : "دعونا "} <span className="text-[#960037]">{language === "en" ? "Help You" : "نساعدك"}</span>
+      </h1>
 
-        {/* Left Section */}
-        <div className="flex justify-center md:justify-start">
-          <img
-            src="/logo.png"
-            alt="Company Logo"
-            className="w-40 sm:w-48 md:w-56 lg:w-64"
-          />
-        </div>
-
-        {/* Right Section */}
-        <div className="bg-white p-6 md:p-8 rounded-lg shadow-md space-y-6 w-full">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 text-center md:text-left">
-            {contactInfo[language].heading}
-          </h2>
-
-          <div className="space-y-4">
-            <ContactItem icon={<FaGlobe />} text={contactInfo[language].website} />
-            <ContactItem icon={<IoMailSharp />} text={contactInfo[language].email} />
-            <ContactItem icon={<FaPhoneAlt />} text={contactInfo[language].phone} />
-            <ContactItem icon={<IoLocationSharp />} text={contactInfo[language].address} />
+      {/* Contact Options */}
+      <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        {contactDetails.map((detail, index) => (
+          <div
+            key={index}
+            className="border-2 border-[#960037] shadow-lg rounded-xl p-6 bg-white hover:shadow-2xl transition"
+          >
+            <detail.icon className="redText text-5xl mx-auto mb-3" />
+            <h2 className="text-xl font-semibold redText">{detail.title[language]}</h2>
+            <p className="text-gray-700">{detail.info1[language]}</p>
+            {detail.info2 && <p className="text-gray-700">{detail.info2[language]}</p>}
           </div>
-        </div>
+        ))}
+      </div>
+
+      {/* Contact Form */}
+      <div className="mt-16 bg-white shadow-lg rounded-xl p-8 max-w-2xl mx-auto">
+        <h2 className="text-3xl font-semibold text-center text-gray-900 mb-6">
+          {formLabels[language].title}
+        </h2>
+        <form className="flex flex-col space-y-4">
+          <input
+            type="text"
+            placeholder={formLabels[language].name}
+            className="border p-3 rounded-md w-full focus:ring-2 focus:ring-[#960037] outline-none"
+            required
+          />
+          <input
+            type="email"
+            placeholder={formLabels[language].email}
+            className="border p-3 rounded-md w-full focus:ring-2 focus:ring-[#960037] outline-none"
+            required
+          />
+          <textarea
+            rows="5"
+            placeholder={formLabels[language].message}
+            className="border p-3 rounded-md w-full focus:ring-2 focus:ring-[#960037] outline-none"
+            required
+          ></textarea>
+          <button
+            type="submit"
+            className="red-color text-white py-3 rounded-md text-lg font-semibold hover:bg-blue-700 transition"
+          >
+            {formLabels[language].sendMessage}
+          </button>
+        </form>
+      </div>
+
+      {/* Map Section */}
+      <div className="mt-16">
+        <h2 className="text-3xl font-semibold text-center textRed mb-6">
+          {formLabels[language].mapTitle}
+        </h2>
+        <iframe
+          className="w-full h-80 rounded-lg shadow-lg"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094096!2d144.95373531531577!3d-37.81720997975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727e0a2720a567!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1633970294483!5m2!1sen!2sus"
+          allowFullScreen=""
+          loading="lazy"
+        ></iframe>
       </div>
     </div>
   );
 };
 
-const ContactItem = ({ icon, text }) => (
-  <div className="flex items-center space-x-3">
-    <span className="text-gray-600 text-xl">{icon}</span>
-    <span className="text-base sm:text-lg font-semibold text-gray-700">{text}</span>
-  </div>
-);
-
-export default Contact;
+export default ContactUs;

@@ -27,7 +27,7 @@ const Hero = () => {
   return (
     <>
       <div
-        className="my-40 h-100 w-[90%] mx-auto bg-gradient-to-br gradientColor rounded-xl shadow-lg ml-auto text-white p-5 flex items-center"
+        className="my-24 h-100 w-[90%] mx-auto bg-gradient-to-br gradientColor rounded-xl shadow-lg ml-auto text-white p-5 flex items-center"
         dir={language === "ar" ? "rtl" : "ltr"} // Set direction to RTL if language is Arabic
       >
         <div className="w-full">

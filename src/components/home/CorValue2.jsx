@@ -35,13 +35,13 @@ export default function CoreValue2() {
         {/* Core Values */}
         <div className="sm:w-[100%] w-full p-10 order-2 lg:order-1">
           <p className="redText">{translations[language].subtitle}</p>
-          <h1 className="text-3xl font-semibold">
+          <h1 className="text-3xl font-semibold sm:font-bold">
             {translations[language].heading}
           </h1>
           {translations[language].coreValues.map((desc, index) => (
             <div key={index} className="py-2">
               <ul className="flex gap-2 items-start">
-                <p>☼</p>
+                <p className="text-xl redText">☼</p>
                 <li>{desc}</li>
               </ul>
             </div>
@@ -49,7 +49,7 @@ export default function CoreValue2() {
         </div>
 
         {/* Image */}
-        <div className="sm:w-[100%] w-full h-auto order-1 lg:order-2">
+        <div className="sm:w-[100%] w-full h-auto order-1 lg:order-2 sm:mt-12">
           <img
             src={value2}
             alt="Access"
