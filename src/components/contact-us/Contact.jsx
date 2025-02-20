@@ -1,5 +1,10 @@
 import React, { useContext } from "react";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaClock,
+} from "react-icons/fa";
 import { LanguageContext } from "../../context/LanguageContext";
 
 const ContactUs = () => {
@@ -9,26 +14,40 @@ const ContactUs = () => {
     {
       title: { en: "Address", ar: "العنوان" },
       icon: FaMapMarkerAlt,
-      info1: { en: "640 Chestnut Ridge Road", ar: "640 شارع شستنت ريدج" },
-      info2: { en: "Spring Valley, NY 10977", ar: "وادي الربيع، نيويورك 10977" },
+      info1: {
+        en: "Address: Doha - Al Muntazah - Street 830, Building 16",
+        ar: "الدوحة – المنتزه – شارع ،830 مبنى 16 ",
+      },
+      info2: {
+        en: "Spring Valley, NY 10977",
+        ar: "وادي الربيع، نيويورك 10977",
+      },
     },
     {
       title: { en: "Email", ar: "البريد الإلكتروني" },
       icon: FaEnvelope,
-      info1: { en: "Contact@carlyrent.com", ar: "Contact@carlyrent.com" },
-      info2: { en: "Support@carlyrent.com", ar: "دعم@carlyrent.com" },
+      info1: {
+        en: " novietaa@novietaaplus.com",
+        ar: " novietaa@novietaaplus.com",
+      },
     },
     {
       title: { en: "Phone", ar: "الهاتف" },
       icon: FaPhoneAlt,
-      info1: { en: "+(62) 800-567-8990", ar: "+(62) 800-567-8990" },
-      info2: { en: "+(62) 800-567-8990", ar: "+(62) 800-567-8990" },
+      info1: { en: "+974 70809767", ar: "+974 70809767" },
+      info2: { en: "+974 70809768", ar: "+974 70809768" },
     },
     {
       title: { en: "Working Hours", ar: "ساعات العمل" },
       icon: FaClock,
-      info1: { en: "Mon – Fri: 9 AM – 11 PM", ar: "من الإثنين إلى الجمعة: 9 صباحًا - 11 مساءً" },
-      info2: { en: "Sat – Sun: 9 AM – 5 AM", ar: "السبت - الأحد: 9 صباحًا - 5 صباحًا" },
+      info1: {
+        en: "Mon – Fri: 9 AM – 11 PM",
+        ar: "من الإثنين إلى الجمعة: 9 صباحًا - 11 مساءً",
+      },
+      info2: {
+        en: "Sat – Sun: 9 AM – 5 AM",
+        ar: "السبت - الأحد: 9 صباحًا - 5 صباحًا",
+      },
     },
   ];
 
@@ -53,10 +72,16 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="container mx-auto px-6 md:px-12 py-12 mt-20" dir={language === "ar" ? "rtl" : "ltr"}>
+    <div
+      className="container mx-auto px-6 md:px-12 py-12 mt-20"
+      dir={language === "ar" ? "rtl" : "ltr"}
+    >
       {/* Header */}
       <h1 className="text-4xl font-bold text-center mb-12">
-        {language === "en" ? "Let Us " : "دعونا "} <span className="text-[#960037]">{language === "en" ? "Help You" : "نساعدك"}</span>
+        {language === "en" ? "Let Us " : "دعونا "}{" "}
+        <span className="text-[#960037]">
+          {language === "en" ? "Help You" : "نساعدك"}
+        </span>
       </h1>
 
       {/* Contact Options */}
@@ -67,9 +92,13 @@ const ContactUs = () => {
             className="border-2 border-[#960037] shadow-lg rounded-xl p-6 bg-white hover:shadow-2xl transition"
           >
             <detail.icon className="redText text-5xl mx-auto mb-3" />
-            <h2 className="text-xl font-semibold redText">{detail.title[language]}</h2>
+            <h2 className="text-xl font-semibold redText">
+              {detail.title[language]}
+            </h2>
             <p className="text-gray-700">{detail.info1[language]}</p>
-            {detail.info2 && <p className="text-gray-700">{detail.info2[language]}</p>}
+            {detail.info2 && (
+              <p className="text-gray-700">{detail.info2[language]}</p>
+            )}
           </div>
         ))}
       </div>
@@ -108,14 +137,14 @@ const ContactUs = () => {
       </div>
 
       {/* Map Section */}
-      <div className="mt-16">
+      <div className="mt-16 h-[500px] my-50">
         <h2 className="text-3xl font-semibold text-center textRed mb-6">
           {formLabels[language].mapTitle}
         </h2>
         <iframe
-          className="w-full h-80 rounded-lg shadow-lg"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094096!2d144.95373531531577!3d-37.81720997975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727e0a2720a567!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1633970294483!5m2!1sen!2sus"
-          allowFullScreen=""
+          src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d14481140.236100959!2d48.99103119502275!3d27.611052757065927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d29.376511999999998!2d71.75208959999999!4m5!1s0x3e45c5039c2200a5%3A0xed769c069bbae1a6!2z2KfZhNiv2YjYrdipIOKAkyDYp9mE2YXZhtiq2LLZhyDigJMg2LTYp9ix2Lkg2Iw4MzAg2YXYqNmG2YkgMTbigK0!3m2!1d25.2670297!2d51.5204622!5e0!3m2!1sen!2s!4v1740070115357!5m2!1sen!2s"
+          className="w-full h-full rounded-2xl"
+          allowfullscreen=""
           loading="lazy"
         ></iframe>
       </div>

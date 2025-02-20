@@ -1,9 +1,12 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { LanguageContext } from "../../context/LanguageContext"; // Import language context
 import value2 from "../../assets/HomeImg/value2.png";
+import { motion, useInView } from "framer-motion";
 
 export default function CoreValue2() {
   const { language } = useContext(LanguageContext); // Get current language
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   // Define translations inside the component
   const translations = {
@@ -30,32 +33,52 @@ export default function CoreValue2() {
   };
 
   return (
-    <div className="h-fit sm:mt-10" dir={language === "ar" ? "rtl" : "ltr"}>
+    <div
+      className="h-fit sm:mt-10"
+      dir={language === "ar" ? "rtl" : "ltr"}
+      ref={ref}
+    >
       <div className="w-full mx-auto sm:w-[90%] flex lg:flex-row flex-col gap-4">
         {/* Core Values */}
-        <div className="sm:w-[100%] w-full p-10 order-2 lg:order-1">
+        <motion.div
+          className="sm:w-[100%] w-full p-10 order-2 lg:order-1"
+          initial={{ opacity: 0, x: -100 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+          transition={{ duration: 1 }}
+        >
           <p className="redText">{translations[language].subtitle}</p>
           <h1 className="text-3xl font-semibold sm:font-bold">
             {translations[language].heading}
           </h1>
           {translations[language].coreValues.map((desc, index) => (
-            <div key={index} className="py-2">
+            <motion.div
+              key={index}
+              className="py-2"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+            >
               <ul className="flex gap-2 items-start">
                 <p className="text-xl redText">☼</p>
                 <li>{desc}</li>
               </ul>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Image */}
-        <div className="sm:w-[100%] w-full h-auto order-1 lg:order-2 sm:mt-12">
+        <motion.div
+          className="sm:w-[100%] w-full h-auto order-1 lg:order-2 sm:mt-12"
+          initial={{ opacity: 0, x: 100 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+          transition={{ duration: 1 }}
+        >
           <img
             src={value2}
             alt="Access"
             className="w-full h-auto object-cover"
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

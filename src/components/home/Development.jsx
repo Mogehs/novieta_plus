@@ -29,12 +29,12 @@ export default function Development() {
     >
       <div className="w-full lg:w-3/4 mx-auto text-center space-y-6">
         {/* Subtitle */}
-        <p className="text-lg sm:text-xl font-medium text-gray-600">
+        <p className="text-lg sm:text-xl font-medium text-[#262626]">
           {translations[language].subtitle}
         </p>
 
         {/* Heading */}
-        <h1 className="text-2xl sm:text-4xl font-semibold text-gray-900">
+        <h1 className="text-2xl sm:text-4xl font-semibold redText">
           {translations[language].heading}
         </h1>
 

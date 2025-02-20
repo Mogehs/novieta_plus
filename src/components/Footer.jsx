@@ -9,21 +9,35 @@ const Footer = () => {
   // Define translations inside the component
   const translations = {
     en: {
-      product: "Product",
+      services: "Services",
       company: "Company",
       developers: "Developers",
       socialMedia: "Social media",
-      features: ["Features", "Integrations", "Pricing", "FAQ"],
+      features: [
+        { name: "Website Design", link: "/services/website-design" },
+        { name: "Digital Marketing", link: "/services/digital-marketing" },
+        {
+          name: "Event and Conference Organization",
+          link: "/services/event-conference",
+        },
+      ],
       companyLinks: ["Privacy", "Terms of Service"],
       developerLinks: ["Public API", "Documentation", "Guides"],
       footerText: "© 2025 Novietaa. All rights reserved.",
     },
     ar: {
-      product: "المنتج",
+      services: "الخدمات",
       company: "الشركة",
       developers: "المطورين",
       socialMedia: "وسائل التواصل الاجتماعي",
-      features: ["الميزات", "التكاملات", "الأسعار", "الأسئلة الشائعة"],
+      features: [
+        { name: "تصميم المواقع", link: "/services/website-design" },
+        { name: "التسويق الرقمي", link: "/services/digital-marketing" },
+        {
+          name: "تنظيم الفعاليات والمؤتمرات",
+          link: "/services/event-conference",
+        },
+      ],
       companyLinks: ["الخصوصية", "شروط الخدمة"],
       developerLinks: ["واجهة برمجة التطبيقات العامة", "الوثائق", "الدلائل"],
       footerText: "© 2025 نوفيا. جميع الحقوق محفوظة.",
@@ -31,7 +45,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="px-4 divide-y  bg-[#960037] backdrop-blur-md text-white border-t border-white/20 shadow-lg">
+    <footer className="px-4 divide-y bg-[#262626] backdrop-blur-md text-[white] border-t border-white/20 shadow-lg">
       <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
         <div className="lg:w-1/3">
           <a
@@ -44,7 +58,7 @@ const Footer = () => {
         </div>
         <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
           {[
-            translations[language].product,
+            translations[language].services,
             translations[language].company,
             translations[language].developers,
             translations[language].socialMedia,
@@ -57,8 +71,8 @@ const Footer = () => {
                 <ul className="space-y-1 font-base">
                   {index === 0 &&
                     translations[language].features.map((item) => (
-                      <li key={item}>
-                        <Link to="">{item}</Link>
+                      <li key={item.name}>
+                        <Link to={item.link}>{item.name}</Link>
                       </li>
                     ))}
                   {index === 1 &&
@@ -77,13 +91,13 @@ const Footer = () => {
               ) : (
                 <div className="flex justify-start space-x-3">
                   <Link to="" title="LinkedIn" className="p-1">
-                    <FaLinkedin className="w-6 h-6 hover:text-[#0077b5]" />
+                    <FaLinkedin className="w-6 h-6 hover:text-white" />
                   </Link>
                   <Link to="" title="Facebook" className="p-1">
-                    <FaFacebook className="w-6 h-6 hover:text-[#1877F2]" />
+                    <FaFacebook className="w-6 h-6 hover:text-white" />
                   </Link>
                   <Link to="" title="Twitter" className="p-1">
-                    <FaTwitter className="w-6 h-6 hover:text-[#1DA1F2]" />
+                    <FaTwitter className="w-6 h-6 hover:text-white" />
                   </Link>
                 </div>
               )}

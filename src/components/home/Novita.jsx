@@ -11,9 +11,9 @@ export default function Novita() {
   const translations = {
     en: {
       subtitle: "Prioritize impactful tasks that drive the most value.",
-      title: "Novieta Plus - Integrated Advertising and Marketing Solutions",
+      title: "Novietaa Plus - Integrated Advertising and Marketing Solutions",
       description:
-        "Novieta Plus delivers innovative and comprehensive advertising solutions. We focus on providing high-quality marketing services that help build a strong brand identity, enhance visibility, and increase engagement with the target audience across multiple channels.",
+        "Novietaa Plus delivers innovative and comprehensive advertising solutions. We focus on providing high-quality marketing services that help build a strong brand identity, enhance visibility, and increase engagement with the target audience across multiple channels.",
     },
     ar: {
       subtitle: "أولوية المهام المؤثرة التي تحقق أكبر قيمة.",
@@ -40,7 +40,7 @@ export default function Novita() {
       <div className="w-full grid grid-cols-1  lg:grid-cols-2 gap-3">
         {/* Content */}
         <div className="w-full md:w-[90%] h-auto p-10">
-          <h4 className="text-xs font-semibold">
+          <h4 className="text-xs font-semibold redText">
             {translations[language].subtitle}
           </h4>
           <h1 className="text-xl sm:text-5xl font-semibold">
@@ -50,7 +50,7 @@ export default function Novita() {
         </div>
 
         {/* Video */}
-        <div className="w-full lg:w-[70%]  pr-2.5 flex justify-center items-center">
+        <div className="w-full lg:w-[90%] lg:h-130  pr-2.5 flex justify-center items-center">
           <video
             src={work}
             autoPlay

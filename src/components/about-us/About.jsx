@@ -189,8 +189,8 @@ export default function AboutUs() {
                 : "اتصل لطرح أي سؤال"}
             </p>
             <div className="mt-4 flex gap-2 flex-col text-xl redText font-semibold">
-              <p>+(62) 800-567-8990</p>
-              <p> +(62) 800-567-8990</p>
+              <p>+974 70809767</p>
+              <p>+974 70809768</p>
             </div>
           </div>
         </div>

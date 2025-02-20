@@ -12,10 +12,12 @@ import DocPhoto from "./pages/services/DocPhoto";
 import DigitalMaketing from "./pages/services/DigitalMaketing";
 import ContactUs from "./pages/ContactUs";
 import { LanguageProvider } from "./context/LanguageContext";
+import ScrollToTop from "./components/ScrollToTop";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl overflow-x-hidden">
     <Navbar />
+    <ScrollToTop />
     <Outlet />
     <Footer />
   </div>
