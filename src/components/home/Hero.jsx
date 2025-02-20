@@ -22,8 +22,6 @@ const Hero = () => {
   };
   const navigate = useNavigate();
 
-  
-
   return (
     <>
       <div
@@ -38,18 +36,19 @@ const Hero = () => {
             {translations[language].subtitle} {/* Dynamic subtitle */}
           </p>
           {/* btn */}
-          <button className=" mt-10 brown-color w-fit p-3  rounded-2xl cursor-pointer  mx-auto lg:mx-0 hover:shadow-2xl transition-all delay-75 ease-in-out" onClick={() => navigate("/services")}>{translations[language].buttonText}</button>
+          <button
+            className=" mt-10 brown-color w-fit p-3  rounded-2xl cursor-pointer  mx-auto lg:mx-0 hover:shadow-2xl transition-all delay-75 ease-in-out"
+            onClick={() => navigate("/our-services")}
+          >
+            {translations[language].buttonText}
+          </button>
         </div>
         <img
           src="/services/Standing-Man-Laptop.webp"
           alt=""
           className="h-[28.8rem] relative -top-7.5 hidden lg:inline"
         />
-
-
-
       </div>
-
     </>
   );
 };
