@@ -45,13 +45,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="px-4 divide-y bg-[#262626] backdrop-blur-md text-[white] border-t border-white/20 shadow-lg">
+    <footer className="px-4 divide-y bg-[#262626] backdrop-blur-md text-[white] border-t border-white/20 shadow-lg tracking-wider">
       <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
         <div className="lg:w-1/3">
-          <a
-            href="#"
-            className="flex justify-center space-x-3 lg:justify-start"
-          >
+          <a href="#" className="flex items-center justify-start">
             <img src="/logo.png" className="h-10" alt="" />
             <span className="self-center text-xl font-bold">Novietaa</span>
           </a>

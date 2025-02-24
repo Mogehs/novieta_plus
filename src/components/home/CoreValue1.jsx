@@ -33,15 +33,11 @@ export default function CoreValue1() {
   };
 
   return (
-    <div
-      className="h-fit sm:mt-10"
-      dir={language === "ar" ? "rtl" : "ltr"}
-      ref={ref}
-    >
+    <div className="h-fit" dir={language === "ar" ? "rtl" : "ltr"} ref={ref}>
       <div className="w-full mx-auto sm:w-[90%] grid grid-cols-1 lg:grid-cols-2 gap-4">
         {/* Image Section */}
         <motion.div
-          className="sm:w-[100%] w-full h-auto sm:mt-14"
+          className="sm:w-[100%] w-full h-auto"
           initial={{ opacity: 0, x: -100 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
           transition={{ duration: 1 }}

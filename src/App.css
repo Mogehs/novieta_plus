@@ -6,11 +6,11 @@
 }
 
 .brown-color {
-  background-color: #A89055;
+  background-color: #a89055;
 }
 
 .light-color {
-  background-color: #A89055;
+  background-color: #a89055;
 }
 
 .black-color {
@@ -18,9 +18,14 @@
 }
 
 .gradientColor {
-  background: linear-gradient(70deg, #960037 50%, #A89055);
+  background: linear-gradient(70deg, #960037 50%, #a89055);
 }
-
+.gradientColor2 {
+  background: linear-gradient(20deg, #960037, #a89055 20%);
+}
+.gradientColor3 {
+  background: linear-gradient(20deg, #960037 20%, #a89055);
+}
 .glow-effect {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
     0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4);

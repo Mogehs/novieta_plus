@@ -1,13 +1,13 @@
 // import React from "react";
 import Service from "../components/services/Service";
-import Hero from "../components/services/Hero";
 // import ResponsiveDesign from "./ResponsiveDesign";
 import Banner from "../components/services/Banner";
+import Hero from "../components/Hero";
 
 const Services = () => {
   return (
     <div>
-      <Hero title="Services" />
+      <Hero />
       <Service />
       {/* <ResponsiveDesign /> */}
       <Banner />

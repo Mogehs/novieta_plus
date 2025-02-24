@@ -85,13 +85,13 @@ const ContactUs = () => {
       </h1>
 
       {/* Contact Options */}
-      <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 text-center px-4 sm:px-6">
         {contactDetails.map((detail, index) => (
           <div
             key={index}
-            className="border-2 border-[#960037] shadow-lg rounded-xl p-6 bg-white hover:shadow-2xl transition"
+            className="border-2 border-[#960037] shadow-lg rounded-xl p-6 bg-white hover:shadow-2xl transition flex flex-col items-center justify-between h-full min-h-[250px]"
           >
-            <detail.icon className="redText text-5xl mx-auto mb-3" />
+            <detail.icon className="redText text-5xl mb-3" />
             <h2 className="text-xl font-semibold redText">
               {detail.title[language]}
             </h2>

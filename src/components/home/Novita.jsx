@@ -1,7 +1,5 @@
 import { useContext } from "react";
-import dot from "../../assets/HomeImg/dot.svg";
-import work from "../../assets/HomeImg/work.mp4";
-import rectangle from "../../assets/HomeImg/rectangle.png";
+
 import { LanguageContext } from "../../context/LanguageContext"; // Import language context
 
 export default function Novita() {
@@ -10,7 +8,7 @@ export default function Novita() {
   // Define translations inside the component
   const translations = {
     en: {
-      subtitle: "Prioritize impactful tasks that drive the most value.",
+      subtitle: "Prioritize impactful tasks that drive the most value",
       title: "Novietaa Plus - Integrated Advertising and Marketing Solutions",
       description:
         "Novietaa Plus delivers innovative and comprehensive advertising solutions. We focus on providing high-quality marketing services that help build a strong brand identity, enhance visibility, and increase engagement with the target audience across multiple channels.",
@@ -24,41 +22,23 @@ export default function Novita() {
   };
 
   return (
-    <div className="h-fit relative mt-24">
-      {/* Dotted Images */}
-      <img
-        src={dot}
-        alt="dotted background"
-        className="absolute top-0 left-0 w-1/2 sm:w-1/3"
-      />
-      <img
-        src={rectangle}
-        alt="rectangle background"
-        className="absolute hidden lg:inline top-0 right-4 -z-10 w-1/2 sm:w-1/3"
-      />
-
-      <div className="w-full grid grid-cols-1  lg:grid-cols-2 gap-3">
-        {/* Content */}
-        <div className="w-full md:w-[90%] h-auto p-10">
-          <h4 className="text-xs font-semibold redText">
-            {translations[language].subtitle}
-          </h4>
-          <h1 className="text-xl sm:text-5xl font-semibold">
-            {translations[language].title}
-          </h1>
-          <p className="mt-2">{translations[language].description}</p>
-        </div>
-
-        {/* Video */}
-        <div className="w-full lg:w-[90%] lg:h-130  pr-2.5 flex justify-center items-center">
-          <video
-            src={work}
-            autoPlay
-            muted
-            loop
-            className="w-[300px] h-[200px] sm:w-[70%] sm:h-[70%] object-cover rounded-lg"
-          />
-        </div>
+    <div className="h-fit relative mt-20 w-full">
+      <video
+        src="/home/company.mp4"
+        loop
+        muted
+        autoPlay
+        poster="/home/job-5382501_1920.jpg"
+        className="h-[86vh] w-full object-cover"
+      ></video>
+      <div className="absolute top-0 bg-black w-full h-full opacity-80"></div>
+      <div className="absolute top-30 tracking-wider px-2 sm:left-20">
+        <p className="bg-white redText text-[0.7rem] rounded-sm sm:text-[1rem]  relative w-70 px-2 sm:px-10 sm:py-1 sm:rounded-full font font-semibold sm:w-110 ">
+          {translations[language].subtitle}
+        </p>
+        <h1 className="text-white mt-4 text-2xl sm:text-6xl font-bold w-80 sm:w-200">
+          {translations[language].title}
+        </h1>
       </div>
     </div>
   );

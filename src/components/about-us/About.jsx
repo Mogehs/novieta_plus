@@ -96,7 +96,7 @@ export default function AboutUs() {
           <p className="redText font-bold ">
             {language === "en" ? "Who we are" : "من نحن"}
           </p>
-          <p className="text-5xl font-bold sm:w-[96.8%]">
+          <p className="text-2xl sm:text-5xl font-bold sm:w-[96.8%]">
             {language === "en"
               ? "  Highly Tailored IT Design, Management & Support Services."
               : "خدمات تصميم وإدارة ودعم تكنولوجيا المعلومات مصممة خصيصًا بدقة."}
@@ -153,12 +153,12 @@ export default function AboutUs() {
 
       <div className="p-10 flex flex-col sm:flex-row max-sm:gap-10">
         <div className="sm:w-[60%] ">
-          <h2 className="text-5xl sm:w-[85%] font-bold">
+          <h2 className="text-2xl sm:text-5xl sm:w-[85%] font-bold">
             {language === "en"
               ? "Preparing for your success, we provide truly prominent IT solutions."
               : ".نحن نعدك للنجاح، ونوفر حلول تكنولوجيا المعلومات البارزة حقًا."}
           </h2>
-          <ul className="list-disc pl-5 mt-4 text-lg">
+          <ul className="text-sm list-disc pl-5 mt-4 sm:text-lg">
             <li>
               {language === "en"
                 ? "We always focus on technical excellence"
@@ -200,7 +200,7 @@ export default function AboutUs() {
         <p className="redText font-bold text-lg">
           {language === "en" ? "Testimonials" : "شهادة"}
         </p>
-        <h1 className="font-semibold text-4xl text-center">
+        <h1 className="text-2xl font-semibold sm:text-4xl text-center">
           {language === "en"
             ? "20k+ satisfied clients worldwide"
             : "20 ألف+ عملاء راضين في جميع أنحاء العالم"}

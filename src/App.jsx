@@ -15,7 +15,7 @@ import { LanguageProvider } from "./context/LanguageContext";
 import ScrollToTop from "./components/ScrollToTop";
 
 const MainLayout = () => (
-  <div className="lg:mx-auto lg:max-w-7xl overflow-x-hidden">
+  <div className="lg:mx-auto lg:max-w-7xl overflow-x-hidden tracking-wider">
     <Navbar />
     <ScrollToTop />
     <Outlet />

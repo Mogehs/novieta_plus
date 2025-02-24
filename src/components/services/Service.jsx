@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { LanguageContext } from "../../context/LanguageContext"; // Import the language context
+import WeAreProviding from "./WeAreProviding";
 
 const Service = () => {
   const { language } = useContext(LanguageContext);
@@ -48,8 +49,13 @@ const Service = () => {
               scale: 1.05,
               boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
             }}
-            className="light-color h-60 w-[90vw] sm:h-70 sm:w-70 rounded-xl text-black text-[1.3rem] text-center flex flex-col justify-around py-10 gap-3 shadow-lg transition-all duration-300"
+            className="h-auto w-[90vw] sm:h-[80vh] sm:w-70 rounded-xl text-black text-[1.3rem] text-center flex flex-col justify-around py-10 gap-3 shadow-lg transition-all duration-300 relative overflow-hidden"
           >
+            <img
+              src="/new-services/web-design.jpg"
+              alt=""
+              className="w-full h-full rounded-xl"
+            />
             <img
               src="/services/design-svgrepo-com.svg"
               alt=""
@@ -71,10 +77,15 @@ const Service = () => {
               scale: 1.05,
               boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
             }}
-            className="light-color h-60 w-[90vw] sm:h-70 sm:w-70 rounded-xl text-black text-[1.3rem] text-center flex flex-col justify-around py-10 gap-3 mt-5 shadow-lg transition-all duration-300"
+            className="h-auto w-[90vw] sm:h-[80vh] sm:w-70 rounded-xl text-black text-[1.3rem] text-center flex flex-col justify-around py-10 gap-3 shadow-lg transition-all duration-300 relative overflow-hidden"
           >
             <img
-              src="/services/rocket-2-svgrepo-com.svg"
+              src="/new-services/dm.jpg"
+              alt=""
+              className="w-full h-full rounded-xl"
+            />
+            <img
+              src="/services/aeroplane-plane-svgrepo-com.svg"
               alt=""
               className="h-15 w-fit mx-auto"
             />
@@ -102,8 +113,13 @@ const Service = () => {
               scale: 1.05,
               boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
             }}
-            className="light-color h-60 w-[90vw] sm:h-70 sm:w-90 rounded-xl text-black text-[1.3rem] text-center flex flex-col justify-around py-10 gap-3 mx-auto mt-5 shadow-lg transition-all duration-300"
+            className="w-[90vw] sm:h-[80vh] sm:w-90 rounded-xl text-black text-[1.3rem] text-center flex flex-col justify-around  gap-3 mx-auto mt-5 shadow-lg transition-all duration-300"
           >
+            <img
+              src="/new-services/media-production.jpg"
+              alt=""
+              className="h-full rounded-xl"
+            />
             <img
               src="/services/software-svgrepo-com.svg"
               alt=""
@@ -128,8 +144,13 @@ const Service = () => {
               scale: 1.05,
               boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
             }}
-            className="light-color h-60 w-[90vw] sm:h-70 sm:w-70 rounded-xl text-black text-[1.3rem] text-center flex flex-col justify-around py-10 gap-3 shadow-lg transition-all duration-300"
+            className="h-auto w-[90vw] sm:h-[80vh] sm:w-70 rounded-xl text-black text-[1.3rem] text-center flex flex-col justify-around py-10 gap-3 shadow-lg transition-all duration-300 relative overflow-hidden"
           >
+            <img
+              src="/new-services/doc-photo.jpg"
+              alt=""
+              className="w-full h-full rounded-xl"
+            />
             <img
               src="/services/optimization-svgrepo-com.svg"
               alt=""
@@ -151,8 +172,13 @@ const Service = () => {
               scale: 1.05,
               boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
             }}
-            className="light-color h-60 w-[90vw] sm:h-70 sm:w-70 rounded-xl text-black text-[1.3rem] text-center flex flex-col justify-around py-10 gap-3 mt-5 shadow-lg transition-all duration-300"
+            className="h-auto w-[90vw] sm:h-[80vh] sm:w-70 rounded-xl text-black text-[1.3rem] text-center flex flex-col justify-around py-10 gap-3 shadow-lg transition-all duration-300 relative overflow-hidden"
           >
+            <img
+              src="/new-services/con-org.jpg"
+              alt=""
+              className="w-full h-full rounded-xl"
+            />
             <img
               src="/services/development-idea-svgrepo-com.svg"
               alt=""
@@ -170,6 +196,7 @@ const Service = () => {
           </motion.div>
         </div>
       </div>
+      {/* <WeAreProviding /> */}
     </div>
   );
 };

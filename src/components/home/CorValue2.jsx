@@ -34,7 +34,7 @@ export default function CoreValue2() {
 
   return (
     <div
-      className="h-fit sm:mt-10"
+      className="h-fit sm:mt-10 "
       dir={language === "ar" ? "rtl" : "ltr"}
       ref={ref}
     >
