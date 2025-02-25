@@ -33,8 +33,8 @@ const Navbar = () => {
       <div className="max-w-screen-xl flex items-center justify-between mx-auto px-4 py-3 tracking-wider">
         <Link to="/" className="flex items-center space-x-3">
           <img
-            src="/cvg.svg"
-            className="w-10 sm:w-16 sm:h-16 object-contain rounded-lg"
+            src="/logo.png"
+            className="w-10 sm:w-16 sm:h-16 object-contain rounded-full"
             alt="logo"
           />
         </Link>

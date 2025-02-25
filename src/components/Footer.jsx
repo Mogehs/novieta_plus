@@ -49,7 +49,7 @@ const Footer = () => {
       <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
         <div className="lg:w-1/3">
           <a href="#" className="flex items-center justify-start">
-            <img src="/logo.png" className="h-10 rounded-lg" alt="" />
+            <img src="/logo.png" className="h-10 mr-2 rounded-full" alt="" />
             <span className="self-center text-xl font-bold">Novietaa</span>
           </a>
         </div>
