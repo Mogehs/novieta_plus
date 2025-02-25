@@ -13,6 +13,8 @@ import DigitalMaketing from "./pages/services/DigitalMaketing";
 import ContactUs from "./pages/ContactUs";
 import { LanguageProvider } from "./context/LanguageContext";
 import ScrollToTop from "./components/ScrollToTop";
+import Printing from "./pages/services/Printing";
+import Advertising from "./pages/services/Advertising";
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-7xl overflow-x-hidden tracking-wider">
@@ -36,6 +38,8 @@ const router = createBrowserRouter([
       { path: "/services/media-production", element: <MediaProduction /> },
       { path: "/services/documentation-photography", element: <DocPhoto /> },
       { path: "/services/event-conference", element: <EventCon /> },
+      { path: "/services/offset-printing", element: <Printing /> },
+      { path: "/services/advertising", element: <Advertising /> },
     ],
   },
 ]);

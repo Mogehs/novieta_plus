@@ -31,11 +31,10 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full z-50 top-0 backdrop-blur-md bg-[#262626] border-b border-white/20 shadow-lg transition-all duration-300 ease-in-out">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto px-4 py-3 tracking-wider">
-        {/* Logo */}
         <Link to="/" className="flex items-center space-x-3">
           <img
-            src="/logo.png"
-            className="w-16 h-16 object-contain"
+            src="/cvg.svg"
+            className="w-10 sm:w-16 sm:h-16 object-contain rounded-lg"
             alt="logo"
           />
         </Link>

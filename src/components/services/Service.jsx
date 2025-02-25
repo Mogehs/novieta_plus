@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { LanguageContext } from "../../context/LanguageContext"; // Import the language context
-import WeAreProviding from "./WeAreProviding";
 
 const Service = () => {
   const { language } = useContext(LanguageContext);
@@ -17,6 +16,8 @@ const Service = () => {
       mediaProduction: "Media Production and Marketing Strategy Development",
       documentationPhotography: "Documentation and Photography",
       eventOrganization: "Event and Conference Organization",
+      digitalAndOffsetPrinting: "Digital And Offset Printing",
+      adver: "Advertising Through Various Media Channels",
     },
     ar: {
       heading: "خدماتنا",
@@ -25,7 +26,9 @@ const Service = () => {
       digitalMarketing: "التسويق الرقمي",
       mediaProduction: "إنتاج الوسائط وتطوير استراتيجيات التسويق",
       documentationPhotography: "التوثيق والتصوير الفوتوغرافي",
+      digitalAndOffsetPrinting: " الطباعة الرقمية والأوفست",
       eventOrganization: "تنظيم الفعاليات والمؤتمرات",
+      adver: " الإعلان عبر قنوات الإعلام المختلفة",
     },
   };
 
@@ -52,26 +55,25 @@ const Service = () => {
             className="h-auto w-[90vw] sm:h-[80vh] sm:w-70 rounded-xl text-black text-[1.3rem] text-center flex flex-col justify-around py-10 gap-3 shadow-lg transition-all duration-300 relative overflow-hidden"
           >
             <img
-              src="/new-services/web-design.jpg"
+              src="/new-services/d-print.jpg"
               alt=""
-              className="w-full h-full rounded-xl"
+              className="w-full h-full rounded-xl object-cover"
             />
             <img
-              src="/services/design-svgrepo-com.svg"
+              src="/services/optimization-svgrepo-com.svg"
               alt=""
               className="h-15 w-fit mx-auto"
             />
             <motion.p whileHover={{ color: "#96193a", cursor: "pointer" }}>
-              {servicesText[language].websiteDesign}
+              {servicesText[language].digitalAndOffsetPrinting}
             </motion.p>
             <motion.div
               whileHover={{ x: 10 }}
-              onClick={() => navigate("/services/website-design")}
+              onClick={() => navigate("/services/offset-printing")}
             >
               <FaArrowRightLong className="text-black cursor-pointer text-[2rem] sm:text-[3rem] w-fit mx-auto hover:text-[#96193a]" />
             </motion.div>
           </motion.div>
-
           <motion.div
             whileHover={{
               scale: 1.05,
@@ -197,6 +199,62 @@ const Service = () => {
         </div>
       </div>
       {/* <WeAreProviding /> */}
+      <div className="flex flex-col sm:flex-row mb-30 gap-10 items-center justify-center">
+        <motion.div
+          whileHover={{
+            scale: 1.05,
+            boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
+          }}
+          className="h-auto w-[90vw] sm:h-[80vh] sm:w-70 rounded-xl text-black text-[1.3rem] text-center flex flex-col justify-around py-10 gap-3 shadow-lg transition-all duration-300 relative overflow-hidden"
+        >
+          <img
+            src="/new-services/web-design.jpg"
+            alt=""
+            className="w-full h-full rounded-xl"
+          />
+          <img
+            src="/services/design-svgrepo-com.svg"
+            alt=""
+            className="h-15 w-fit mx-auto"
+          />
+          <motion.p whileHover={{ color: "#96193a", cursor: "pointer" }}>
+            {servicesText[language].websiteDesign}
+          </motion.p>
+          <motion.div
+            whileHover={{ x: 10 }}
+            onClick={() => navigate("/services/website-design")}
+          >
+            <FaArrowRightLong className="text-black cursor-pointer text-[2rem] sm:text-[3rem] w-fit mx-auto hover:text-[#96193a]" />
+          </motion.div>
+        </motion.div>
+        <motion.div
+          whileHover={{
+            scale: 1.05,
+            boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
+          }}
+          className="h-auto w-[90vw] sm:h-[80vh] sm:w-70 rounded-xl text-black text-[1.3rem] text-center flex flex-col justify-around py-10 gap-3 shadow-lg transition-all duration-300 relative overflow-hidden"
+        >
+          <img
+            src="/new-services/adver.jpg"
+            alt=""
+            className="w-full h-50 rounded-xl object-cover"
+          />
+          <img
+            src="/services/development-idea-svgrepo-com.svg"
+            alt=""
+            className="h-15 w-fit mx-auto"
+          />
+          <motion.p whileHover={{ color: "#96193a", cursor: "pointer" }}>
+            {servicesText[language].adver}
+          </motion.p>
+          <motion.div
+            whileHover={{ x: 10 }}
+            onClick={() => navigate("/services/advertising")}
+          >
+            <FaArrowRightLong className="text-black cursor-pointer text-[2rem] sm:text-[3rem] w-fit mx-auto hover:text-[#96193a]" />
+          </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 };

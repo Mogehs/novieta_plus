@@ -6,7 +6,7 @@ import Hero from "../components/home/Hero";
 import Marquee from "../components/home/Marquee";
 import Novita from "../components/home/Novita";
 import OurVision from "../components/home/OurVision";
-import WeAreProviding from "../components/home/WeAreProviding";
+import WeAreProviding from "../components/services/WeAreProviding";
 
 const Home = () => {
   return (
@@ -14,6 +14,7 @@ const Home = () => {
       <Novita />
       <Marquee />
       <OurVision />
+      <WeAreProviding />
       <CoreValue1 />
       <CorValue2 />
       <CorValue3 />
