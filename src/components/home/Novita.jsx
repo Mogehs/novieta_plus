@@ -15,21 +15,21 @@ export default function Novita() {
     },
     ar: {
       subtitle: "أولوية المهام المؤثرة التي تحقق أكبر قيمة.",
-      title: "نوفـيتا بلس - حلول الإعلان والتسويق المتكاملة",
+      title: "نوفـيتا بلص - حلول الإعلان والتسويق المتكاملة",
       description:
         "توفر نوفـيتا بلس حلولًا إعلانية مبتكرة وشاملة. نحن نركز على تقديم خدمات تسويقية عالية الجودة تساعد في بناء هوية علامة تجارية قوية، وتعزيز الرؤية، وزيادة التفاعل مع الجمهور المستهدف عبر قنوات متعددة.",
     },
   };
 
   return (
-    <div className="h-[70vh] sm:h-fit relative sm:mt-20 w-full">
+    <div className="h-[20rem] sm:h-fit relative sm:mt-20 w-full">
       <video
         src="/home/company.mp4"
         loop
         muted
         autoPlay
         poster="/home/job-5382501_1920.jpg"
-        className="h-[70vh] sm:h-[85vh] w-full object-cover"
+        className="h-[20rem] sm:h-[85vh] w-full object-cover"
       ></video>
       <div className="absolute top-0 bg-black w-full h-full opacity-80"></div>
       <div className="absolute top-30 tracking-wider px-2 sm:left-20">

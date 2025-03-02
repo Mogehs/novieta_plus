@@ -8,7 +8,19 @@ import six from "/marquee/design-tool-pencil-svgrepo-com.svg";
 import seven from "/marquee/development-svgrepo-com.svg";
 import eight from "/marquee/services-svgrepo-com.svg";
 
-const images = [one, two, three, four, five, six, seven, eight];
+const images = [
+  one,
+  two,
+  three,
+  four,
+  five,
+  six,
+  four,
+  seven,
+  eight,
+  seven,
+  two,
+];
 
 export default function Marquee() {
   const sliderRef = useRef(null);
@@ -21,7 +33,7 @@ export default function Marquee() {
       animation = slider.animate(
         [{ transform: "translateX(0)" }, { transform: "translateX(-100%)" }],
         {
-          duration: 40000,
+          duration: 30000,
           iterations: Infinity,
           easing: "linear",
         }
@@ -44,7 +56,7 @@ export default function Marquee() {
   }, []);
 
   return (
-    <div className="w-full overflow-hidden py-10 bg-gray-100">
+    <div className="w-full overflow-hidden my-5 bg-gray-100">
       <div ref={sliderRef} className="flex w-[200%]  gap-20">
         {[...images, ...images].map((img, index) => (
           <div key={index} className="w-20 p-2 flex-shrink-0 cursor-pointer">

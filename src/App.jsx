@@ -17,7 +17,7 @@ import Printing from "./pages/services/Printing";
 import Advertising from "./pages/services/Advertising";
 
 const MainLayout = () => (
-  <div className="lg:mx-auto lg:max-w-7xl overflow-x-hidden tracking-wider">
+  <div className="lg:mx-auto overflow-x-hidden tracking-wider">
     <Navbar />
     <ScrollToTop />
     <Outlet />

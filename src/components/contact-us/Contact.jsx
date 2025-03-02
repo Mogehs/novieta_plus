@@ -34,8 +34,8 @@ const ContactUs = () => {
     {
       title: { en: "Phone", ar: "الهاتف" },
       icon: FaPhoneAlt,
-      info1: { en: "+974 70809767", ar: "+974 70809767" },
-      info2: { en: "+974 70809768", ar: "+974 70809768" },
+      info1: { en: "+974 70809767", ar: "70809767 974+" },
+      info2: { en: "+974 70809768", ar: "70809768 974+" },
     },
     {
       title: { en: "Working Hours", ar: "ساعات العمل" },

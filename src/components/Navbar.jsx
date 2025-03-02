@@ -29,12 +29,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed w-full z-50 top-0 backdrop-blur-md bg-[#262626] border-b border-white/20 shadow-lg transition-all duration-300 ease-in-out">
+    <nav className="fixed w-full z-50 top-0 backdrop-blur-md bg-[#262626] border-b border-white/20 shadow-lg transition-all duration-300 ease-in-out h-[5.5rem]">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto px-4 py-3 tracking-wider">
-        <Link to="/" className="flex items-center space-x-3">
+        <Link to="/" className="flex items-center justify-center">
           <img
-            src="/logo.png"
-            className="w-10 sm:w-16 sm:h-16 object-contain rounded-full"
+            src="/logo.jpg"
+            className="w-10 sm:w-14 sm:h-14 object-contain rounded-full"
             alt="logo"
           />
         </Link>

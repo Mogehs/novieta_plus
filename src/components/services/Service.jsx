@@ -34,7 +34,7 @@ const Service = () => {
 
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen w-full pt-20 px-5">
+    <div className="max-w-screen-xl mx-auto min-h-screen w-full pt-20 px-5">
       <div className="flex flex-col items-center text-center">
         <p className="text-[1.2rem] redText">
           {servicesText[language].subheading}
